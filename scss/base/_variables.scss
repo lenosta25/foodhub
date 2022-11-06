@@ -1,0 +1,29 @@
+$maxWidth: 1920;
+$minWidth: 320;
+$containerPadding: 15;
+$maxWidthContainer: 1407 + ($containerPadding*2);
+// Fonts
+$f-open-sans: 'Open Sans', sans-serif;
+$f-roboto: 'Roboto', sans-serif ;
+
+// Font size
+
+// colors
+$c-main-bg: #25272E;
+$c-bg-cards: #3C3F4A;
+$c-bg-counter: #46474A;
+$c-accent: #FCC232;
+$c-additional-accent: #FD7E41;
+
+$c-base-txt: #A7A9BE;
+$c-white: #FFFFFE;
+$c-dark: #25272E;
+$c-light-gray: #DFDDDD;
+
+
+
+// Box hadow
+$bs-dark-white-btn: 0px 15px 50px rgba(171, 172, 175, 0.1); 
+$bs-accent-btn: 0px 15px 50px rgba(215, 153, 0, 0.15);
+$bs-active-social-network: 0px 6px 10px rgba(181, 129, 0, 0.15);
+

@@ -1,0 +1,19 @@
+@use "sass:math";
+@function prc($pxOne, $pxTwo){
+   // $pxOne - value by layout in pixels
+   // $pxTwo - value relative to which % is calculated
+   $result: math.div($pxOne, $pxTwo) * 100;
+   @return $result;
+}
+
+@function rem($px){
+   // $px - value by layout
+   $result: math.div($px, 16) + rem;
+   // browser default font size 16px
+   @return $result;
+}
+
+@function em($px){
+   $result: math.div($px, 16) + em;
+   @return $result;
+}
