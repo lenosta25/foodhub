@@ -1,0 +1,58 @@
+.servises {
+   &__container {
+      @extend %flex-center-center;
+      @include adaptive-value("column-gap", 87, 10, 0);
+      row-gap: rem(85);
+      @include flex-wrap(wrap);
+      @include adaptive-value("padding-top", 160, 70, 0);
+      
+   }
+
+   &__item {
+      position: relative;
+      max-width: rem(378);
+      border-radius: rem(37);
+      background-color: $c-bg-cards;
+      @include adaptive-value("padding-top", 123, 60, 0);
+      @include adaptive-value("padding-right", 49, 15, 0);
+      @include adaptive-value("padding-bottom", 48, 30, 0);
+      @include adaptive-value("padding-left", 49, 15, 0);
+   }
+
+   &__item-icon {
+      position: absolute;
+      top: -55px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      @extend %flex-center-center;
+      @include adaptive-value("max-width", 148, 80, 0);
+      @include adaptive-value("min-height", 148, 80, 0);
+      border-radius: 50%;
+      background-color: $c-white;
+   }
+
+   &__item-txt {
+      font-weight: 600;
+      @include adaptive-value("font-size", 36, 20, 0);
+      color: $c-white;
+      text-align: center;
+   }
+}
+
+@include desktop{
+   .servises{
+      &__item{
+      padding-right: rem(49);
+      padding-left: rem(49);
+      &-icon{
+         img{
+            max-width: 60%;
+         }
+         &:first-child{
+            max-width: 34%;
+         }
+      } 
+   }
+}
+}
