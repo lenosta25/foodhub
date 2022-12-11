@@ -1,0 +1,77 @@
+// flex
+%flex{
+   display: flex;
+}
+// alignment along the main axis and along the transverse
+// main axis-CENTER
+%flex-center-start{
+   @extend %flex;
+   @include justify-content(center);
+   @include align-items(start)
+}
+
+%flex-center-center{
+   @extend %flex;
+   @include justify-content(center);
+   @include align-items(center)
+}
+
+%flex-center-end{
+   @extend %flex;
+   @include justify-content(center);
+   @include align-items(end)
+}
+// main axis-END
+%flex-end-start{
+   @extend %flex;
+   @include justify-content(end);
+   @include align-items(start)
+}
+
+%flex-end-center{
+   @extend %flex;
+   @include justify-content(end);
+   @include align-items(center)
+}
+
+%flex-end-end{
+   @extend %flex;
+   @include justify-content(end);
+   @include align-items(end)
+}
+// main axis-SPACE-BETWEEN
+%flex-space-between-start{
+   @extend %flex;
+   @include justify-content(space-between);
+   @include align-items(start);
+}
+
+%flex-space-between-center{
+   @extend %flex;
+   @include justify-content(space-between);
+   @include align-items(center);
+}
+
+%flex-space-between-end{
+   @extend %flex;
+   @include justify-content(space-between);
+   @include align-items(end);
+}
+// main axis-SPACE-AROUND
+%flex-space-around-start{
+   @extend %flex;
+   @include justify-content(space-around);
+   @include align-items(start);
+}
+
+%flex-space-around-center{
+   @extend %flex;
+   @include justify-content(space-around);
+   @include align-items(center);
+}
+
+%flex-space-around-end{
+   @extend %flex;
+   @include justify-content(space-around);
+   @include align-items(end);
+}

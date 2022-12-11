@@ -1,8 +1,13 @@
-@use "sass:math";
-@function prc($pxOne, $pxTwo){
+// @function prc($pxOne, $pxTwo){
    // $pxOne - value by layout in pixels
    // $pxTwo - value relative to which % is calculated
-   $result: math.div($pxOne, $pxTwo) * 100;
+//    $result: math.div($pxOne, $pxTwo) * 100%;
+//    @return $result;
+// }
+// calculation of the image width or height in % relative to the width container
+@function prcImg($pxImg){
+   // $pxImg - the width or height of the image in pixels behind the layout
+   $result: math.div($pxImg, $maxWidthContainer)*100%;
    @return $result;
 }
 

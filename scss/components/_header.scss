@@ -1,0 +1,173 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $c-main-bg;
+  z-index: 20;
+
+  &__logo {
+    z-index: 11;
+  }
+
+  &__inner {
+    @extend %flex-space-between-center;
+    @include adaptive-value("gap", 148, 30, 0);
+    min-height: rem(127);
+    padding: rem(15) 0;
+  }
+
+  .menu {
+    @extend %flex-space-between-center;
+    flex-grow: 1;
+    @include adaptive-value("gap", 57, 30, 0);
+    z-index: 10;
+
+    &__nav-list {
+      @extend %flex;
+      @include flex-wrap(wrap);
+      @include adaptive-value("column-gap", 57, 30, 0);
+      row-gap: rem(10);
+      a {
+        color: $c-light-gray;
+        position: relative;
+        @extend %text-fill-effectt;
+      }
+    }
+
+    &__action {
+      @extend %flex-center-center;
+      gap: 0 rem(20);
+      color: $c-light-gray;
+      &-login {
+        position: relative;
+        @extend %text-fill-effectt;
+      }
+      &-cart {
+        position: relative;
+        @extend %flex-center-center;
+        width: rem(24.35);
+        height: rem(24.35);
+        border-radius: rem(2.89);
+        background: $c-accent;
+        color: $c-dark;
+        transition: all 0.5s ease;
+        &::before {
+          font-size: rem(12);
+        }
+        &:hover {
+          transform: scale(1.05);
+        }
+        span {
+          @extend %flex-center-center;
+
+          position: absolute;
+          top: rem(-4);
+          right: rem(-4);
+
+          width: rem(8);
+          height: rem(8);
+          border-radius: 50%;
+          background: $c-white;
+
+          font-family: $f-roboto;
+          font-weight: 500;
+          font-size: rem(3.67);
+          color: $c-dark;
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+
+    &__burger {
+      display: none;
+      position: relative;
+      height: rem(26);
+      width: rem(48);
+      overflow: hidden;
+      cursor: pointer;
+      span {
+        position: absolute;
+        top: calc(50% - 1px);
+        left: 0;
+        width: rem(33);
+        height: rem(3);
+        border-radius: rem(50);
+        background: $c-accent;
+        transition: all 0.3s ease 0s;
+        &:first-child {
+          top: 0;
+        }
+        &:last-child {
+          top: auto;
+          bottom: 0;
+        }
+      }
+      &._active {
+        span {
+          transform: scale(0);
+          &:first-child {
+            transform: rotate(-45deg);
+            top: calc(50% - 1px);
+          }
+          &:last-child {
+            transform: rotate(45deg);
+            bottom: calc(50% - 1px);
+          }
+        }
+      }
+    }
+  }
+}
+._disable-skroll {
+  overflow: hidden;
+}
+
+@include desktop {
+  .header {
+    background: $c-bg-cards;
+    .menu {
+      flex-grow: 0;
+      &__nav {
+        position: fixed;
+        top: rem(127);
+        left: 0;
+        width: 100%;
+        transform: translateX(-100%);
+        transition: transform 0.6s ease-in-out;
+        &-list {
+          flex-direction: column;
+          align-items: center;
+          flex-wrap: nowrap;
+          row-gap: rem(30);
+          height: 100vh;
+          overflow-y: auto;
+          background: $c-main-bg;
+          opacity: 0.97;
+          padding: rem(58) 0;
+          font-size: rem(28);
+        }
+      }
+      &__burger {
+        display: block;
+        z-index: 11;
+      }
+      ._active {
+        transform: none;
+      }
+    }
+  }
+}
+@include mobile {
+  .header .menu__action {
+    position: fixed;
+    top: rem(520);
+    left: 0;
+    right: 0;
+    transform: translateX(-100%);
+    transition: transform 0.6s ease-in-out;
+    font-size: rem(28);
+  }
+}

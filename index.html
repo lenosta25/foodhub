@@ -4,33 +4,97 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./dist/icons.css" />
     <link rel="stylesheet" href="./dist/main.css" />
     <title>Foodhub</title>
   </head>
   <body>
     <header class="header">
       <div class="header__container">
-        <a href="!#">
-          <img src="./img/logo.svg" alt="logo" />
-        </a>
-        <div class="header__menu menu">
-          <nav class="menu__body">
-            <ul class="menu__list">
-              <li class="menu__item">Home</li>
-              <li class="menu__item">Menu</li>
-              <li class="menu__item">Service</li>
-              <li class="menu__item">Delivery</li>
-              <li class="menu__item">Contact</li>
-            </ul>
-          </nav>
+        <div class="header__inner">
+          <a class="header__logo" href="#!">
+            <img src="./img/logo.svg" alt="logo" />
+          </a>
+          <div class="header__menu menu">
+            <nav class="menu__nav">
+              <ul class="menu__nav-list">
+                <li><a class="link" href="#!" data-item="Home">Home</a></li>
+                <li><a class="link" href="#!" data-item="Menu">Menu</a></li>
+                <li>
+                  <a class="link" href="#!" data-item="Service">Service</a>
+                </li>
+                <li>
+                  <a class="link" href="#!" data-item="Delivery">Delivery</a>
+                </li>
+                <li>
+                  <a class="link" href="#!" data-item="Contact">Contact</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="menu__action">
+              <a class="menu__action-login" href="#!" data-item="Login"
+                >Login</a
+              >
+              <button class="menu__action-cart icon-shopping-bag" type="button">
+                <span>1</span>
+              </button>
+            </div>
+            <button class="menu__burger" type="button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
         </div>
       </div>
     </header>
+    <main>
+      <section class="banner">
+        <div class="banner__container">
+          <div class="banner__content">
+            <p class="banner__content-greeting">Welcome to Foodhub</p>
+            <h1 class="banner__content-title">Enjoy Healthy & Tasty Food</h1>
+            <div class="banner__content-txt">
+              <p>
+                Food is usually of plant, animal or fungal origin, and contains
+                essential nutrients, such as carbohydrates, fats, proteins,
+                vitamins, or minerals.
+              </p>
+            </div>
+              <a class="banner__content-btn btn" href="#!"> Explore Menu</a>
+
+          </div>
+          <div class="banner__image image">
+            <div class="image__circle"></div>
+            <div class="image__man">
+              <img src="./img/man-holding-burger.png" alt="" />
+            </div>
+            <img
+              class="image__first-dish animate"
+              src="./img/dishes/breast-with-vegetables.png"
+              alt=""
+            />
+            <img
+              class="image__second-dish animate"
+              src="./img/dishes/salad-with-shrimp.png"
+              alt=""
+            />
+            <img
+              class="image__third-dish animate"
+              src="./img/dishes/traditional-rice.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./js/script.js"></script>
   </body>
 </html>

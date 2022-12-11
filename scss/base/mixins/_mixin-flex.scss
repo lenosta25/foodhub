@@ -1,0 +1,13 @@
+// flex
+// flex-start | flex-end | center | space-between | space-around
+@mixin justify-content($justify) {
+   justify-content: $justify;
+ }
+ // flex-start | flex-end | center | baseline | stretch
+ @mixin align-items($align) {
+   align-items: $align;
+ }
+ // nowrap | wrap | wrap-reverse
+ @mixin flex-wrap($wrap) {
+   flex-wrap: $wrap;
+ }

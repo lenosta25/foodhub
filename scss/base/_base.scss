@@ -1,16 +1,28 @@
 [class*="__container"]{
    width: 100%;
-   max-width: rem(950);
+   max-width: rem($maxWidthContainer);
    margin: 0 auto;
    padding: 0 15px;
+   position: relative;
 }
 
 body{
+   height: 100vh;
    font-family: $f-open-sans;
    font-weight: 400;
    font-size: rem(20);
    color: $c-base-txt;
-   
+   // overflow-x: hidden;
    background: $c-main-bg;
 }
 
+.btn{
+   height: rem(73);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: rem(50);
+   font-weight: 700;
+   box-shadow: $bs-btn;
+   transition: all 0.5s ease-in-out;
+}

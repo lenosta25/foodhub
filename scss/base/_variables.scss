@@ -1,7 +1,18 @@
 $maxWidth: 1920;
 $minWidth: 320;
+$widthContainer: 1407;
 $containerPadding: 15;
-$maxWidthContainer: 1407 + ($containerPadding*2);
+$maxWidthContainer: $widthContainer + ($containerPadding*2);
+
+// Breakpoints
+$breakpoints: (
+  xxl: 1200px,
+  xl: 920px,
+  md: 768px,
+  sm: 480px,
+  xs: 320px 
+);
+
 // Fonts
 $f-open-sans: 'Open Sans', sans-serif;
 $f-roboto: 'Roboto', sans-serif ;
@@ -22,8 +33,6 @@ $c-light-gray: #DFDDDD;
 
 
 
-// Box hadow
-$bs-dark-white-btn: 0px 15px 50px rgba(171, 172, 175, 0.1); 
-$bs-accent-btn: 0px 15px 50px rgba(215, 153, 0, 0.15);
+// Box shadow
+$bs-btn: 0px 15px 50px rgba(171, 172, 175, 0.1); 
 $bs-active-social-network: 0px 6px 10px rgba(181, 129, 0, 0.15);
-

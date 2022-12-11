@@ -1,0 +1,11 @@
+@mixin style-btn($width, $bg-color, $color) {
+  width: $width;
+  background-color: $bg-color;
+  color: $color;
+}
+
+@mixin style-btn-active($bg-color, $color) {
+  transform: scale(1.05);
+  background-color: $bg-color;
+  color: $color;
+}
